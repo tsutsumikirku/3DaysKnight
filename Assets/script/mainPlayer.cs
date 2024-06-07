@@ -8,6 +8,7 @@ public class mainPlayer : MonoBehaviour
     [SerializeField] float jumpPower = 5f;
     Rigidbody2D rb;
     float move;
+    int weapon = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +18,21 @@ public class mainPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        move = Input.GetAxisRaw("Horizontal");
+        move = Input.GetAxis("Horizontal");
         rb.AddForce(Vector2.right * move * moveSpeed);
+
+        if(weapon == 1)
+        {
+
+        }
+        if(weapon == 2)
+        {
+
+        }
+        if (weapon == 3)
+        {
+
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -27,7 +41,7 @@ public class mainPlayer : MonoBehaviour
         {
             if(Input.GetButton("Jump"))
             {
-                rb.AddForce(Vector2.up * jumpPower);
+                rb.AddForce(Vector2.up * jumpPower * 3);
             }
         }
     }
