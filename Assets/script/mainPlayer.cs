@@ -7,6 +7,7 @@ public class mainPlayer : MonoBehaviour
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float jumpPower = 5f;
     Rigidbody2D rb;
+   public int bazzarl = 0;
     float move;
     int weapon = 1;
     // Start is called before the first frame update
@@ -21,15 +22,15 @@ public class mainPlayer : MonoBehaviour
         move = Input.GetAxis("Horizontal");
         rb.AddForce(Vector2.right * move * moveSpeed);
 
-        if(weapon == 1)
+        if(weapon == 1 && bazzarl == 0)
         {
 
         }
-        if(weapon == 2)
+        if(weapon == 2 && bazzarl == 0)
         {
 
         }
-        if (weapon == 3)
+        if (weapon == 3 && bazzarl == 0)
         {
 
         }
