@@ -6,6 +6,7 @@ public class mainPlayer : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float jumpPower = 5f;
+    public int level = 1;
     Rigidbody2D rb;
    public int bazzarl = 0;
     float move;
