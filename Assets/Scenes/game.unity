@@ -528,8 +528,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30fa045ff7bd8b9479068d1caad21684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 50
   jumpPower: 80
+  nextLevel: {fileID: 0}
+  level: 1
   bazzarl: 0
 --- !u!4 &868075877
 Transform:
