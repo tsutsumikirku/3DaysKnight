@@ -1,20 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class mainPlayer : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float jumpPower = 5f;
+    public Text nextLevel;
     public int level = 1;
+    public int bazzarl = 0;
     Rigidbody2D rb;
-   public int bazzarl = 0;
     float move;
     int weapon = 1;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        nextLevel = GetComponent<Text>();   
     }
 
     // Update is called once per frame
@@ -22,6 +25,10 @@ public class mainPlayer : MonoBehaviour
     {
         move = Input.GetAxis("Horizontal");
         rb.AddForce(Vector2.right * move * moveSpeed);
+        if(move == 0)
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
 
         if(weapon == 1 && bazzarl == 0)
         {
