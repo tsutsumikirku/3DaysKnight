@@ -5,16 +5,17 @@ using UnityEngine.UI;
 
 public class mainPlayer : MonoBehaviour
 {
- 
     
+    [SerializeField] float hp = 5f;
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float jumpPower = 5f;
-     public Text nextLevel;
     public int level = 1;
     public int bazzarl = 0;
- 
-    
-   
+
+    public Text nextLevel;
+
+
+
     Rigidbody2D rb;
     float move;
     int weapon = 1;
@@ -23,7 +24,7 @@ public class mainPlayer : MonoBehaviour
     void Start()
     {
        
-
+        //ゲットコンポーネント
         rb = GetComponent<Rigidbody2D>();
         nextLevel = GetComponent<Text>();   
     }
@@ -31,6 +32,8 @@ public class mainPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //移動のプログラム
         move = Input.GetAxis("Horizontal");
         rb.AddForce(Vector2.right * move * moveSpeed);
         if(move < 0.5 || move > -0.5)
@@ -38,6 +41,8 @@ public class mainPlayer : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
 
+        
+        //バザールと武器管理のプログラム予定
         if(weapon == 1 && bazzarl == 0)
         {
 
@@ -52,6 +57,9 @@ public class mainPlayer : MonoBehaviour
         }
     }
 
+
+
+    //ジャンプ処理
     private void OnCollisionStay2D(Collision2D collision)
     {
         if(collision.collider.tag == "floor")
