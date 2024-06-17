@@ -564,7 +564,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 5
   m_AngularDrag: 0
-  m_GravityScale: 2
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -677,7 +677,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 5
   moveSpeed: 50
-  jumpPower: 80
+  jumpPower: 160
+  jumpin: 1
   level: 1
   bazzarl: 0
   hptex: {fileID: 405480934}
