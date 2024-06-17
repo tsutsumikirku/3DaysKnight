@@ -11,8 +11,10 @@ public class mainPlayer : MonoBehaviour
     [SerializeField] float jumpPower = 5f;
     public int level = 1;
     public int bazzarl = 0;
+    public Text hptex;
+     
 
-    public Text nextLevel;
+
 
 
 
@@ -23,19 +25,31 @@ public class mainPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+
+    
+
+
+
+
+
+
         //ゲットコンポーネント
         rb = GetComponent<Rigidbody2D>();
-        nextLevel = GetComponent<Text>();   
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        //テキストボックスの表示プログラム
+        hptex.text = "HP" + hp;
+        
         //移動のプログラム
         move = Input.GetAxis("Horizontal");
+
         rb.AddForce(Vector2.right * move * moveSpeed);
+
+
         if(move < 0.5 || move > -0.5)
         {
             rb.velocity = new Vector2(0, rb.velocity.y);

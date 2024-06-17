@@ -563,8 +563,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 5
-  m_AngularDrag: 0.05
-  m_GravityScale: 2.5
+  m_AngularDrag: 0
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -680,7 +680,7 @@ MonoBehaviour:
   jumpPower: 80
   level: 1
   bazzarl: 0
-  nextLevel: {fileID: 0}
+  hptex: {fileID: 405480934}
 --- !u!4 &868075877
 Transform:
   m_ObjectHideFlags: 0
@@ -1032,7 +1032,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -4.04}
+  m_Offset: {x: 0, y: -3.11}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1043,7 +1043,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 7.31}
   m_EdgeRadius: 0
 --- !u!114 &2143342350
 MonoBehaviour:
@@ -1118,8 +1118,8 @@ Transform:
   m_GameObject: {fileID: 2143342348}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.53, y: 1.2, z: 0}
-  m_LocalScale: {x: 2.5503, y: 1, z: 1}
+  m_LocalPosition: {x: -4.9596, y: 2.2468, z: 0}
+  m_LocalScale: {x: 3.932515, y: 2.0608702, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
