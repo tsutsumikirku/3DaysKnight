@@ -11,16 +11,10 @@ public class mainPlayer : MonoBehaviour
     [SerializeField] float jumpPower = 5f;
     [SerializeField] float jumpin;
     public int level = 1;
+    [SerializeField] Text hptex;
+    [SerializeField] Text leveltex;
     public int bazzarl = 0;
-    public Text hptex;
-   
     float jumpti;
-
-
-
-
-
-
     Rigidbody2D rb;
     float move;
     int weapon = 1;
@@ -30,7 +24,7 @@ public class mainPlayer : MonoBehaviour
     {
         //ジャンプのインターバルのプログラム
         jumpti = jumpin;
-
+        
      
 
 
@@ -47,9 +41,14 @@ public class mainPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        string hps = hp.ToString();
+        hptex.text = "HP" + hps;
+
+        leveltex.text = "Level" + level.ToString();
+
         jumpti += Time.deltaTime;
         //テキストボックスの表示プログラム
-        hptex.text = "HP" + hp;
+        
 
         //移動のプログラム
         move = Input.GetAxis("Horizontal");
